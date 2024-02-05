@@ -36,9 +36,12 @@ scale = 1.7 * halfwidth / fullwidth
 # kanjifont内の各グリフに対してループ処理
 for glyph in kanjifont.glyphs():
     # 全角のみ処理する（kanjifontの中にも半角記号などが存在するがそれは対象外）
-    if glyph.width > fullwidth * 0.75:
-        glyph.transform([scale, 0, 0, scale, dx, dy]) # サイズと位置調整
-        glyph.width = halfwidth * 2 # 全角サイズ
+    if glyph.width > fullwidth * 0.75 or (glyph.unicode >= 0xff65 and glyph.unicode < 0xffa0):
+        if glyph.width < fullwidth * 0.75:
+            glyph.transform([scale, 0, 0, scale, dx / 2, dy]) # サイズと位置調整
+        else:
+            glyph.transform([scale, 0, 0, scale, dx, dy]) # サイズと位置調整
+            glyph.width = halfwidth * 2 # 全角サイズ
         try: # 一部のコードポイントが例外になるものがある
             if glyph.unicode in asciifont: # 既存なら消去
                 asciifont.selection.select(glyph.unicode)
