@@ -12,6 +12,21 @@ asciifont.fullname = basename + " Gothic Font"
 
 savename = asciifont.fontname + '.ttf'
 
+print("kanjifont.os2_typoascent: ", kanjifont.os2_typoascent)
+print("kanjifont.hhea_ascent: ", kanjifont.hhea_ascent)
+print("kanjifont.ascent: ", kanjifont.ascent)
+print("kanjifont.os2_typodescent: ", kanjifont.os2_typodescent)
+print("kanjifont.hhea_descent: ", kanjifont.hhea_descent)
+print("kanjifont.descent: ", kanjifont.descent)
+print()
+print("asciifont.os2_typoascent: ", asciifont.os2_typoascent)
+print("asciifont.hhea_ascent: ", asciifont.hhea_ascent)
+print("asciifont.ascent: ", asciifont.ascent)
+print("asciifont.os2_typodescent: ", asciifont.os2_typodescent)
+print("asciifont.hhea_descent: ", asciifont.hhea_descent)
+print("asciifont.descent: ", asciifont.descent)
+print()
+
 # 不要なファミリー名を削除または修正
 new_sfnt_names = []
 for name in asciifont.sfnt_names:
@@ -63,32 +78,25 @@ if scale != 1.0:
     for glyph in asciifont.glyphs():
         glyph.transform([scale, 0, 0, scale, 0, 0])
 
-print("asciifont.os2_typoascent: ", asciifont.os2_typoascent)
-print("asciifont.hhea_ascent: ", asciifont.hhea_ascent)
-print("asciifont.ascent: ", asciifont.ascent)
-print("asciifont.os2_typodescent: ", asciifont.os2_typodescent)
-print("asciifont.hhea_descent: ", asciifont.hhea_descent)
-print("asciifont.descent: ", asciifont.descent)
-
 # フォント全体の高さ調整
-scale = 1.0
-asciifont.os2_typoascent = round(asciifont.os2_typoascent * scale)
-asciifont.os2_typodescent = round(asciifont.os2_typodescent * scale)
+scale = 1.2
+asciifont.ascent = round(asciifont.ascent * scale)
+asciifont.descent = round(asciifont.descent * scale)
+
+asciifont.os2_typoascent = asciifont.ascent
+asciifont.os2_typodescent = -asciifont.descent
 
 scale = 1.0
 asciifont.hhea_ascent = round(asciifont.hhea_ascent * scale)
 asciifont.hhea_descent = round(asciifont.hhea_descent * scale)
 
-scale = 1.2
-asciifont.ascent = round(asciifont.ascent * scale)
-asciifont.descent = round(asciifont.descent * scale)
 
-print("asciifont.os2_typoascent: ", asciifont.os2_typoascent)
-print("asciifont.hhea_ascent: ", asciifont.hhea_ascent)
-print("asciifont.ascent: ", asciifont.ascent)
-print("asciifont.os2_typodescent: ", asciifont.os2_typodescent)
-print("asciifont.hhea_descent: ", asciifont.hhea_descent)
-print("asciifont.descent: ", asciifont.descent)
+print("newfont.os2_typoascent: ", asciifont.os2_typoascent)
+print("newfont.hhea_ascent: ", asciifont.hhea_ascent)
+print("newfont.ascent: ", asciifont.ascent)
+print("newfont.os2_typodescent: ", asciifont.os2_typodescent)
+print("newfont.hhea_descent: ", asciifont.hhea_descent)
+print("newfont.descent: ", asciifont.descent)
 
 # 変更を保存
 asciifont.generate(savename)
