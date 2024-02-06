@@ -63,15 +63,32 @@ if scale != 1.0:
     for glyph in asciifont.glyphs():
         glyph.transform([scale, 0, 0, scale, 0, 0])
 
-# フォント全体のサイズ調整
-scale = 1.2 # 大きいほど縮小
-if scale != 1.0:
-    asciifont.os2_typoascent = round(asciifont.os2_typoascent * scale)
-    asciifont.hhea_ascent = round(asciifont.hhea_ascent * scale)
-    asciifont.ascent = round(asciifont.ascent * scale)
-    asciifont.os2_typodescent = round(asciifont.os2_typodescent * scale)
-    asciifont.hhea_descent = round(asciifont.hhea_descent * scale)
-    asciifont.descent = round(asciifont.descent * scale)
+print("asciifont.os2_typoascent: ", asciifont.os2_typoascent)
+print("asciifont.hhea_ascent: ", asciifont.hhea_ascent)
+print("asciifont.ascent: ", asciifont.ascent)
+print("asciifont.os2_typodescent: ", asciifont.os2_typodescent)
+print("asciifont.hhea_descent: ", asciifont.hhea_descent)
+print("asciifont.descent: ", asciifont.descent)
+
+# フォント全体の高さ調整
+scale = 1.0
+asciifont.os2_typoascent = round(asciifont.os2_typoascent * scale)
+asciifont.os2_typodescent = round(asciifont.os2_typodescent * scale)
+
+scale = 1.0
+asciifont.hhea_ascent = round(asciifont.hhea_ascent * scale)
+asciifont.hhea_descent = round(asciifont.hhea_descent * scale)
+
+scale = 1.2
+asciifont.ascent = round(asciifont.ascent * scale)
+asciifont.descent = round(asciifont.descent * scale)
+
+print("asciifont.os2_typoascent: ", asciifont.os2_typoascent)
+print("asciifont.hhea_ascent: ", asciifont.hhea_ascent)
+print("asciifont.ascent: ", asciifont.ascent)
+print("asciifont.os2_typodescent: ", asciifont.os2_typodescent)
+print("asciifont.hhea_descent: ", asciifont.hhea_descent)
+print("asciifont.descent: ", asciifont.descent)
 
 # 変更を保存
 asciifont.generate(savename)
