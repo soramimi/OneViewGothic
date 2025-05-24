@@ -2,6 +2,8 @@
 
 A custom monospace font combining the best of both worlds for programming with mixed Latin and Japanese text.
 
+![sample image](https://soramimi.github.io/HackVineGothic/sample.png)
+
 ## Overview
 
 HackVine Gothic is a composite font that merges:
