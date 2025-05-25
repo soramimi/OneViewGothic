@@ -1,5 +1,7 @@
 # HackVine Gothic
 
+[English](https://github.com/soramimi/HackVineGothic/blob/master/README_en.md)
+
 プログラミング用のラテン文字と日本語を組み合わせたカスタムモノスペースフォント
 
 ![sample image](https://soramimi.github.io/HackVineGothic/sample.png)
