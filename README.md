@@ -1,81 +1,81 @@
 # HackVine Gothic
 
-A custom monospace font combining the best of both worlds for programming with mixed Latin and Japanese text.
+プログラミング用のラテン文字と日本語を組み合わせたカスタムモノスペースフォント
 
 ![sample image](https://soramimi.github.io/HackVineGothic/sample.png)
 
-## Overview
+## 概要
 
-HackVine Gothic is a composite font that merges:
-- **Hack** - A typeface designed specifically for source code
-- **VL Gothic** - High-quality Japanese font
+HackVine Gothicは以下の2つのフォントを融合した複合フォントです：
+- **Hack** - ソースコード専用に設計されたタイプフェース
+- **VL Gothic** - 高品質な日本語フォント
 
-This creates a cohesive coding font that maintains proper monospace characteristics while providing excellent support for Japanese characters (Kanji, Hiragana, Katakana).
+これにより、適切なモノスペース特性を維持しながら、日本語文字（漢字、ひらがな、カタカナ）への優れたサポートを提供する、統一感のあるコーディング用フォントが実現されます。
 
-## Features
+## 特徴
 
-- **Monospace design** - Perfect for code editors and terminals
-- **ASCII characters** - Clean, readable Latin characters from Hack font
-- **Japanese characters** - Full support for Japanese text from VL Gothic
-- **Consistent metrics** - Unified ascent, descent, and line spacing
-- **Programming optimized** - Designed specifically for source code readability
+- **モノスペース設計** - コードエディタやターミナルに最適
+- **ASCII文字** - Hackフォントからの清潔で読みやすいラテン文字
+- **日本語文字** - VL Gothicからの日本語テキストの完全サポート
+- **一貫したメトリクス** - 統一されたアセント、ディセント、行間
+- **プログラミング最適化** - ソースコードの可読性を重視した設計
 
-## Prerequisites
+## 前提条件
 
-- **FontForge** - Required for building the font
-- **Python** - For running the build script
-- **Make** - For using the Makefile (optional)
+- **FontForge** - フォントのビルドに必要
+- **Python** - ビルドスクリプトの実行用
+- **Make** - Makefileの使用（オプション）
 
-## Building the Font
+## フォントのビルド
 
-### Using Make (Recommended)
+### Makeを使用（推奨）
 
 ```bash
-# Download source fonts and build
+# ソースフォントのダウンロードとビルド
 make
 
-# Install the font to system
+# システムへのフォントのインストール
 make install
 
-# View font information
+# フォント情報の表示
 make scan
 
-# Clean generated files
+# 生成されたファイルのクリーンアップ
 make clean
 ```
 
-### Manual Build
+### 手動ビルド
 
 ```bash
-# Ensure source fonts are available
+# ソースフォントが利用可能であることを確認
 python makefont.py
 ```
 
-## Installation
+## インストール
 
 ### Windows
-1. Build the font using the instructions above
-2. Right-click on `HackVine-Gothic-Regular.ttf`
-3. Select "Install" or "Install for all users"
+1. 上記の手順でフォントをビルドする
+2. `HackVine-Gothic-Regular.ttf`を右クリック
+3. 「インストール」または「すべてのユーザー用にインストール」を選択
 
 ### macOS
-1. Double-click `HackVine-Gothic-Regular.ttf`
-2. Click "Install Font" in Font Book
+1. `HackVine-Gothic-Regular.ttf`をダブルクリック
+2. Font Bookで「フォントをインストール」をクリック
 
 ### Linux
 ```bash
-# Copy to user fonts directory
+# ユーザーフォントディレクトリにコピー
 cp HackVine-Gothic-Regular.ttf ~/.local/share/fonts/
 
-# Refresh font cache
+# フォントキャッシュの更新
 fc-cache -fv
 ```
 
-## Usage
+## 使用方法
 
-Configure your editor or terminal to use "HackVine Gothic" as the font family.
+エディタやターミナルで「HackVine Gothic」をフォントファミリーとして設定してください。
 
-### Popular Editors
+### 主要なエディタでの設定
 
 **VS Code**
 ```json
@@ -94,33 +94,33 @@ set guifont=HackVine\ Gothic:h12
 (set-face-attribute 'default nil :font "HackVine Gothic-12")
 ```
 
-## Source Fonts
+## ソースフォント
 
 - **Hack**: [Source Foundry Hack](https://sourcefoundry.org/hack/)
 - **VL Gothic**: [VL Gothic Font Family](http://vlgothic.dicey.org/)
 
-## License
+## ライセンス
 
-This project combines fonts with different licenses:
-- Hack font is licensed under the MIT License
-- VL Gothic is licensed under a BSD-style license
+このプロジェクトは異なるライセンスのフォントを組み合わせています：
+- HackフォントはMITライセンスでライセンスされています
+- VL GothicはBSDスタイルのライセンスでライセンスされています
 
-Please refer to the original font licenses for usage terms.
+使用条件については、元のフォントライセンスを参照してください。
 
-## Contributing
+## 貢献
 
-Feel free to open issues or submit pull requests to improve the font generation process or documentation.
+フォント生成プロセスやドキュメントの改善について、イシューの作成やプルリクエストの提出をお気軽にお願いします。
 
-## Troubleshooting
+## トラブルシューティング
 
-### FontForge not found
-Make sure FontForge is installed and available in your PATH.
+### FontForgeが見つからない
+FontForgeがインストールされ、PATHで利用可能であることを確認してください。
 
-### Build fails
-Ensure both source fonts are present in the `original/` directory. Run `make download` to fetch them automatically.
+### ビルドが失敗する
+両方のソースフォントが`original/`ディレクトリに存在することを確認してください。`make download`を実行して自動的に取得することができます。
 
-### Font not appearing in applications
-Try refreshing your system's font cache:
-- Windows: Restart the application
-- macOS: Restart Font Book
-- Linux: Run `fc-cache -fv`
+### アプリケーションでフォントが表示されない
+システムのフォントキャッシュを更新してみてください：
+- Windows: アプリケーションを再起動
+- macOS: Font Bookを再起動
+- Linux: `fc-cache -fv`を実行
