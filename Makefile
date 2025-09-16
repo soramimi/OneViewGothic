@@ -1,5 +1,5 @@
 
-FILE := HackVine-Gothic-Regular.ttf
+FILE := OneVine-Gothic-Regular.ttf
 
 all:
 	python makefont.py
@@ -13,9 +13,9 @@ scan:
 
 download:
 	-mkdir original
-	curl -L https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.tar.gz -o original/Hack.tar.gz
-	cd original ; tar zxvf Hack.tar.gz
-	cp original/ttf/Hack-Regular.ttf original/
+	curl -L https://github.com/intel/intel-one-mono/releases/download/V1.4.0/ttf.zip -o original/intelone.zip
+	cd original ; unzip -o intelone.zip
+	cp original/ttf/IntelOneMono-Regular.ttf original/
 	curl -L https://github.com/daisukesuzuki/VLGothic/raw/main/VL-Gothic-Regular.ttf -o original/VL-Gothic-Regular.ttf
 
 clean:

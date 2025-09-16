@@ -1,8 +1,8 @@
 import fontforge
 
-basename = 'HackVine'
+basename = 'OneVine'
 
-asciifont = fontforge.open('original/Hack-Regular.ttf')
+asciifont = fontforge.open('original/IntelOneMono-Regular.ttf')
 kanjifont = fontforge.open('original/VL-Gothic-Regular.ttf')
 
 asciifont.familyname = basename + " Gothic"
