@@ -1,15 +1,15 @@
-# HackVine Gothic
+# OneVine Gothic
 
-[English](https://github.com/soramimi/HackVineGothic/blob/master/README_en.md)
+[English](https://github.com/soramimi/OneVineGothic/blob/master/README_en.md)
 
 プログラミング用のラテン文字と日本語を組み合わせたカスタムモノスペースフォント
 
-![sample image](https://soramimi.github.io/HackVineGothic/sample.png)
+![sample image](https://soramimi.github.io/OneVineGothic/sample.png)
 
 ## 概要
 
-HackVine Gothicは以下の2つのフォントを融合した複合フォントです：
-- **Hack** - ソースコード専用に設計されたタイプフェース
+OneVine Gothicは以下の2つのフォントを融合した複合フォントです：
+- **Intel One Mono** - ソースコード専用に設計されたタイプフェース
 - **VL Gothic** - 高品質な日本語フォント
 
 これにより、適切なモノスペース特性を維持しながら、日本語文字（漢字、ひらがな、カタカナ）への優れたサポートを提供する、統一感のあるコーディング用フォントが実現されます。
@@ -17,7 +17,7 @@ HackVine Gothicは以下の2つのフォントを融合した複合フォント�
 ## 特徴
 
 - **モノスペース設計** - コードエディタやターミナルに最適
-- **ASCII文字** - Hackフォントからの清潔で読みやすいラテン文字
+- **ASCII文字** - Intel One Monoフォントからの清潔で読みやすいラテン文字
 - **日本語文字** - VL Gothicからの日本語テキストの完全サポート
 - **一貫したメトリクス** - 統一されたアセント、ディセント、行間
 - **プログラミング最適化** - ソースコードの可読性を重視した設計
@@ -57,17 +57,17 @@ python makefont.py
 
 ### Windows
 1. 上記の手順でフォントをビルドする
-2. `HackVine-Gothic-Regular.ttf`を右クリック
+2. `OneVine-Gothic-Regular.ttf`を右クリック
 3. 「インストール」または「すべてのユーザー用にインストール」を選択
 
 ### macOS
-1. `HackVine-Gothic-Regular.ttf`をダブルクリック
+1. `OneVine-Gothic-Regular.ttf`をダブルクリック
 2. Font Bookで「フォントをインストール」をクリック
 
 ### Linux
 ```bash
 # ユーザーフォントディレクトリにコピー
-cp HackVine-Gothic-Regular.ttf ~/.local/share/fonts/
+cp OneVine-Gothic-Regular.ttf ~/.local/share/fonts/
 
 # フォントキャッシュの更新
 fc-cache -fv
@@ -75,36 +75,36 @@ fc-cache -fv
 
 ## 使用方法
 
-エディタやターミナルで「HackVine Gothic」をフォントファミリーとして設定してください。
+エディタやターミナルで「OneVine Gothic」をフォントファミリーとして設定してください。
 
 ### 主要なエディタでの設定
 
 **VS Code**
 ```json
 {
-    "editor.fontFamily": "HackVine Gothic, monospace"
+    "editor.fontFamily": "OneVine Gothic, monospace"
 }
 ```
 
 **Vim/Neovim**
 ```vim
-set guifont=HackVine\ Gothic:h12
+set guifont=OneVine\ Gothic:h12
 ```
 
 **Emacs**
 ```elisp
-(set-face-attribute 'default nil :font "HackVine Gothic-12")
+(set-face-attribute 'default nil :font "OneVine Gothic-12")
 ```
 
 ## ソースフォント
 
-- **Hack**: [Source Foundry Hack](https://sourcefoundry.org/hack/)
+- **Intel One Mono**: [Intel One Mono](https://github.com/intel/intel-one-mono)
 - **VL Gothic**: [VL Gothic Font Family](http://vlgothic.dicey.org/)
 
 ## ライセンス
 
 このプロジェクトは異なるライセンスのフォントを組み合わせています：
-- HackフォントはMITライセンスでライセンスされています
+- Intel One MonoフォントはSIL Open Font Licenseでライセンスされています
 - VL GothicはBSDスタイルのライセンスでライセンスされています
 
 使用条件については、元のフォントライセンスを参照してください。

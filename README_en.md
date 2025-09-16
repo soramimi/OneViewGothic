@@ -1,13 +1,13 @@
-# HackVine Gothic
+# OneVine Gothic
 
 A custom monospace font combining the best of both worlds for programming with mixed Latin and Japanese text.
 
-![sample image](https://soramimi.github.io/HackVineGothic/sample.png)
+![sample image](https://soramimi.github.io/OneVineGothic/sample.png)
 
 ## Overview
 
-HackVine Gothic is a composite font that merges:
-- **Hack** - A typeface designed specifically for source code
+OneVine Gothic is a composite font that merges:
+- **Intel One Mono** - A typeface designed specifically for source code
 - **VL Gothic** - High-quality Japanese font
 
 This creates a cohesive coding font that maintains proper monospace characteristics while providing excellent support for Japanese characters (Kanji, Hiragana, Katakana).
@@ -15,7 +15,7 @@ This creates a cohesive coding font that maintains proper monospace characterist
 ## Features
 
 - **Monospace design** - Perfect for code editors and terminals
-- **ASCII characters** - Clean, readable Latin characters from Hack font
+- **ASCII characters** - Clean, readable Latin characters from Intel One Mono font
 - **Japanese characters** - Full support for Japanese text from VL Gothic
 - **Consistent metrics** - Unified ascent, descent, and line spacing
 - **Programming optimized** - Designed specifically for source code readability
@@ -55,17 +55,17 @@ python makefont.py
 
 ### Windows
 1. Build the font using the instructions above
-2. Right-click on `HackVine-Gothic-Regular.ttf`
+2. Right-click on `OneVine-Gothic-Regular.ttf`
 3. Select "Install" or "Install for all users"
 
 ### macOS
-1. Double-click `HackVine-Gothic-Regular.ttf`
+1. Double-click `OneVine-Gothic-Regular.ttf`
 2. Click "Install Font" in Font Book
 
 ### Linux
 ```bash
 # Copy to user fonts directory
-cp HackVine-Gothic-Regular.ttf ~/.local/share/fonts/
+cp OneVine-Gothic-Regular.ttf ~/.local/share/fonts/
 
 # Refresh font cache
 fc-cache -fv
@@ -73,36 +73,36 @@ fc-cache -fv
 
 ## Usage
 
-Configure your editor or terminal to use "HackVine Gothic" as the font family.
+Configure your editor or terminal to use "OneVine Gothic" as the font family.
 
 ### Popular Editors
 
 **VS Code**
 ```json
 {
-    "editor.fontFamily": "HackVine Gothic, monospace"
+    "editor.fontFamily": "OneVine Gothic, monospace"
 }
 ```
 
 **Vim/Neovim**
 ```vim
-set guifont=HackVine\ Gothic:h12
+set guifont=OneVine\ Gothic:h12
 ```
 
 **Emacs**
 ```elisp
-(set-face-attribute 'default nil :font "HackVine Gothic-12")
+(set-face-attribute 'default nil :font "OneVine Gothic-12")
 ```
 
 ## Source Fonts
 
-- **Hack**: [Source Foundry Hack](https://sourcefoundry.org/hack/)
+- **Intel One Mono**: [Intel One Mono](https://github.com/intel/intel-one-mono)
 - **VL Gothic**: [VL Gothic Font Family](http://vlgothic.dicey.org/)
 
 ## License
 
 This project combines fonts with different licenses:
-- Hack font is licensed under the MIT License
+- Intel One Mono font is licensed under the SIL Open Font License
 - VL Gothic is licensed under a BSD-style license
 
 Please refer to the original font licenses for usage terms.
